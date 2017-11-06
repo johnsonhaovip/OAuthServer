@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Authorization Code Grant Client</title>
+</head>
+<body style="background-color:azure">
+    <h1>授权码授予客户端</h1>
+    <h2>客户端应用程序</h2>
+    <form id="form1" action="@ViewBag.Action" method="POST">
+        <div>
+            访问token<br />
+            <input id="AccessToken" name="AccessToken" width="604" type="text" value="@ViewBag.AccessToken" />
+            <input id="Authorize" name="submit.Authorize" value="Authorize" type="submit" />
+            <br />
+            <br />
+            刷新token<br />
+            <input id="RefreshToken" name="RefreshToken" width="604" type="text" value="@ViewBag.RefreshToken" />
+            <input id="Refresh" name="submit.Refresh" value="Refresh" type="submit" />
+            <br />
+            <br />
+            <input id="CallApi" name="submit.CallApi" value="访问受保护的资源Api" type="submit" />
+        </div>
+        <div>
+            @ViewBag.ApiResponse
+        </div>
+    </form>
+</body>
+</html>
